@@ -9,6 +9,7 @@
       :background-color="bg"
       :text-color="tc"
       :active-text-color="atc">
+      <img src="../../assets/images/mimswhitetext.png" style="width: 10vw; margin-top: 13%; margin-bottom: 10% ; ">
       <sidebar-item :routes="permission_routers"></sidebar-item>
     </el-menu>
   </el-scrollbar>
@@ -22,9 +23,9 @@ export default {
   name: 'Sidebar',
   data() {
     return {
-      bg: '#556d84',
+      // bg: '#556d84',
       tc: '#fff',
-      atc: '#41B883'
+      atc: 'rgb(0, 130, 200)'
     }
   },
   components: {
@@ -41,3 +42,9 @@ export default {
   }
 }
 </script>
+
+<style>
+.sidebar-menu{
+  background: linear-gradient(92.49deg, #2F6FED 1.83%, #00A3FF 103.31%);
+}
+</style>

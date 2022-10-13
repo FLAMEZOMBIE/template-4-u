@@ -6,7 +6,7 @@
       </span>
       <el-dropdown-menu slot="dropdown">
         <el-dropdown-item command="profile">{{$t('sidebarDropDown.profile')}}</el-dropdown-item>
-        <el-dropdown-item command="lock">{{$t('sidebarDropDown.lock')}}</el-dropdown-item>
+        <!-- <el-dropdown-item command="lock">{{$t('sidebarDropDown.lock')}}</el-dropdown-item> -->
         <el-dropdown-item command="logout">{{$t('sidebarDropDown.logout')}}</el-dropdown-item>
       </el-dropdown-menu>
     </el-dropdown>

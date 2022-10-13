@@ -1,10 +1,7 @@
 <template>
   <div class="sidebar-wrap">
+    <!-- <img class="logomims" src="../../assets/images/logomims.png"> -->
     <div class="left-area">
-      <icon class="el-header__icon" name="tree" :scale="4"></icon>
-      <span class="el-header__title">
-        MIMs
-      </span>
       <div class="middle-area__cgwrap" @click="handleSwitchNavbar">
         <icon class="category-icon" name="category" :scale="2.8"></icon>
       </div>
@@ -14,10 +11,10 @@
       <div class="middle-area__msglist">
         <breadcrumb />
         
-        <seamless-list 
+        <!-- <seamless-list 
           :messageList="messageList"
           :singleHeight="60"
-          :limitMoveNum="2"/>
+          :limitMoveNum="2"/> -->
       </div>
     </div>
 
@@ -84,7 +81,12 @@ export default {
 @import "../../assets/styl/variables.styl"
 
 right-area-width = 250px
-
+img{
+  width: 100px; 
+  height: 25px; 
+  margin-top: 20px;
+  margin-left: 10px;
+}
 .el-header
   position relative
 

@@ -70,8 +70,4 @@ export default {
   div
     font-size 35px
     color white
-.el-carousel__item:nth-child(2n)
-  background-color #659c84
-.el-carousel__item:nth-child(2n+1)
-  background-color #374b63
 </style>

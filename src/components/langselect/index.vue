@@ -44,5 +44,5 @@ export default {
     color #515151
     transition color .28s
     &:hover
-      color #41b883
+      color #2F6FED
 </style>

@@ -3,7 +3,7 @@
 
 <template>
   <div class="dashboard-wrap">
-    <el-row :gutter="20">
+    <!-- <el-row :gutter="20">
       <el-col :xs="12" :sm="12" :lg="6">
         <div class="box1 widget-card">
           <div class="leftPart">
@@ -48,25 +48,10 @@
           </div>
         </div>
       </el-col>
-    </el-row>
+    </el-row> -->
 
     <el-row :gutter="20">
-      <el-col :sm="24" :lg="6">
-        <el-card shadow="hover" class="todo-wrap">
-          <div slot="header" class="todo-header">
-            <span>{{$t('dashboard.todo')}}</span>
-            <div class="enterTodo">
-              <el-input @keyup.enter.native="addTasks" v-model="newTasks" placeholder="need to do"></el-input>
-            </div>
-          </div>
-          <div class="todo-list">
-            <div v-for="(todo, index) in todolist" :key="index">
-              <el-checkbox v-model="todo.state" :class="todo.state ? 'deleteline' : ''">{{todo.task}}</el-checkbox>
-            </div>
-          </div>
-        </el-card>
-      </el-col>
-      <el-col :sm="24" :lg="18">
+      <el-col :sm="24" :lg="30">
         <div class="line-chart widget-card">
           <line-chart ref="lineChart" :chart-data="lineChartData"></line-chart>
         </div>

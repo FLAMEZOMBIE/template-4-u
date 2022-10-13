@@ -10,7 +10,6 @@
       </el-aside>
 
       <el-main>
-        <tags-view />
         <app-main />
       </el-main>
     </el-container>

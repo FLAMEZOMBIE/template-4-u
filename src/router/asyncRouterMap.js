@@ -120,20 +120,50 @@ export const asyncRouterMap = [
     ]
   },
   {
-    path: '/valentino',
+    path: '/tree',
     component: Layout,
+    redirect: 'noredirect',
+    name: 'tree',
+    meta: {
+      title: 'tree',
+      icon: 'comp'
+    },
     children: [
       {
         path: 'index',
-        component: _import('valentino/index'),
-        name: 'valentino',
-        meta: {
-          title: 'valentino',
-          icon: 'table'
-        }
-      }
+        component: _import('tree/index'),
+        name: 'index',
+        meta: { title: 'index' }
+      },
+      {
+        path: '/tree/tree1',
+        component: Layout,
+        name: 'tree1',
+        meta: { title: 'tree1', },
+        children: [
+          {
+            path: 'page1',
+            component: _import('tree/tree1/page1'),
+            name: 'page1',
+            meta: { title: 'page1' }
+          },
+          {
+            path: 'page2',
+            component: _import('tree/tree1/page2'),
+            name: 'page2',
+            meta: { title: 'page2' }
+          }
+        ]
+      },
+      // {
+      //   path: 'page3',
+      //   component: _import('components/page3'),
+      //   name: 'page3',
+      //   meta: { title: 'page3' }
+      // }
     ]
-  },{
+  },
+  {
     path: '/mims',
     component: Layout,
     children: [

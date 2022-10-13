@@ -27,10 +27,10 @@ export default {
     btn: 'Login',
     radioEN: 'English',
     radioZH: 'Chinese',
-    forgetpwd: 'Forget Password',
+    forgetpwd: 'Lupa Password?',
     remember: 'Remember',
-    userplaceholder: 'please enter lovely username',
-    pwdplaceholder: 'please enter lovely password',
+    userplaceholder: 'Username',
+    pwdplaceholder: 'Password',
     valid: {
       userexist: 'please input username!',
       pwdexist: 'please input password!'

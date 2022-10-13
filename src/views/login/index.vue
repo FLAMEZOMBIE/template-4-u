@@ -3,41 +3,40 @@
     <el-tooltip class="svg-github" effect="dark" content="Connect Me" placement="bottom">
       <a href="https://github.com/FLAMEZOMBIE"><icon name="github" :scale="2.5"></icon></a>
     </el-tooltip>
-    
-    <div class="login-wrap">
+    <img src="../../assets/images/mimsicon.png" style="width: 25vw; position: absolute; left: -100px; top: 50px; transform: rotate(30deg); opacity: 0.3;">
+    <div class="login-wrap" style=" border-radius: 20px; box-shadow: -8px -8px 8px #FFFFFF, 8px 8px 8px rgba(0, 0, 0, 0.05);">
       <el-col :class="translateLeft" :span="Autocomplete">
 
         <div v-if="notforget">
           <div class="logo">
-            <icon name="tree" :scale="8"></icon>
-            <div class="title">
-              <a>
-                <span>{{$t('login.edenPart1')}}</span><span class="subtitle">{{$t('login.edenPart2')}}</span>
-              </a>
-            </div>
+            <img class="logomims" src="../../assets/images/logomims.png" style="width: 150px; height: 40px; margin-top: 40px;">
+            <p style="margin-top: 30px; color: gray; font-size: 13px;">Management Integration Material System</p>
           </div>
         
           <div class="login-form">
             <el-form :model="ruleForm" :rules="rules" ref="ruleForm">
-              <el-form-item prop="username">
-                <el-input :placeholder="$t('login.userplaceholder')" v-model="ruleForm.username"></el-input>
+              <el-form-item prop="username" style="margin-top: 30px;">
+                <el-input :placeholder="$t('login.userplaceholder')" v-model="ruleForm.username" style="border-radius: 10px;"></el-input>
               </el-form-item>
-              <el-form-item prop="password">
-                <el-input :placeholder="$t('login.pwdplaceholder')" type="password" v-model="ruleForm.password"></el-input>
+              <el-form-item prop="password" style="margin-top: 30px;">
+                <el-input :placeholder="$t('login.pwdplaceholder')" type="password" v-model="ruleForm.password" style="border-radius: 10px;"></el-input>
               </el-form-item>
-              <el-form-item class="btn">
-                <el-button :loading="loading" type="primary" @click="handleLogin('ruleForm')">{{$t('login.btn')}}</el-button>
+              <el-col class="forgetpwd" style="font-size: 13px; margin-left: 70%; color: gray;">
+                <span @click="wrapSwitch(false)">{{$t('login.forgetpwd')}}</span>
+              </el-col>
+              <el-form-item class="btn" style="margin-top: 30%;">
+                <el-button :loading="loading" @click="handleLogin('ruleForm')" style="background: linear-gradient(91.08deg, #2F6FED 0.33%, #00A3FF 101.56%); color: white;">{{$t('login.btn')}}</el-button>
               </el-form-item>
             </el-form>
           </div>
 
           <div class="login-footer">
-            <el-col :span="12">
-              <el-checkbox v-model="remember" name="type">{{$t('login.remember')}}</el-checkbox>
-            </el-col>
-            <el-col class="forgetpwd" :span="12">
+            <!-- <el-col :span="12">
+              <el-checkbox v-model="remember">{{$t('login.remember')}}</el-checkbox>
+            </el-col> -->
+            <!-- <el-col class="forgetpwd" :span="12">
               <span @click="wrapSwitch(false)">{{$t('login.forgetpwd')}}</span>
-            </el-col>
+            </el-col> -->
           </div>
         </div>
 
@@ -64,10 +63,10 @@
               <el-form-item class="btn">
                 <el-row :gutter="20">
                   <el-col :span="12">
-                    <el-button @click="wrapSwitch(true)" type="primary">{{$t('login.forget_back')}}</el-button>
+                    <el-button @click="wrapSwitch(true)" >{{$t('login.forget_back')}}</el-button>
                   </el-col>
                   <el-col :span="12">
-                    <el-button @click="forgetHandle" type="primary">{{$t('login.forget_btn')}}</el-button>
+                    <el-button @click="forgetHandle">{{$t('login.forget_btn')}}</el-button>
                   </el-col>
                 </el-row>
               </el-form-item>
@@ -277,8 +276,8 @@ export default {
 .login-wrap
   overflow hidden
   width 400px
-  height 400px
-  background white
+  height 550px
+  background #F8F9FA
   border-radius 4px
   transform translateY(-10px)
   box-shadow 0 1px 3px 0 rgba(0, 0, 0, .12), 0 0 3px 0 rgba(0, 0, 0, .04)
