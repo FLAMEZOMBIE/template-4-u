@@ -3,7 +3,7 @@
     <el-header>
       <nav-bar />
     </el-header>
-    
+
     <el-container>
       <el-aside :width="asideWidth">
         <side-bar class="sidebar-container" />
@@ -58,6 +58,7 @@ export default {
   background el-aside-bg
   color el-aside-color
   overflow hidden
+  border-radius 10px
 
 .el-main
   padding 0
